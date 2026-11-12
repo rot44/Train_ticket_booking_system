@@ -13,7 +13,7 @@ export const swaggerDocument={
     servers:[
         {url:"http://localhost:8000",description:"Local Dev Server"},
     ],
-    //this is basically categorization/grouping for your API endpoints
+    //this is basically grouping for your API endpoints
     tags:[
         {name:"Auth", description:"User registration and login"},
         {name:"Stations",description:"Station management"},
@@ -25,5 +25,5 @@ export const swaggerDocument={
         {name:"Payments",description:"Payment processing"},
         {name:"Admin",description:"Admin dashboard"},
     ],
-    paths:{}, //We'll leave the paths empty for now as adding every single route will make this file huge. This is the perfect stub.
+    paths:{}, 
 };

@@ -52,7 +52,7 @@ export const emailWorker=new Worker(
         try{
             //send email using Resend API (HTTP)
             const{data,error}=await resend.emails.send({
-                from:"IRCTC <onboarding@resend.dev>", //default testing address for Resend
+                from:process.env.RESEND_FROM||"IRCTC <noreply@prakkkkhar.tech>",
                 to:email,
                 subject:subject,
                 text:finalMessage,

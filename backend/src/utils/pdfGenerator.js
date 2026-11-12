@@ -1,4 +1,4 @@
-import PDFDocument from "pdfkit";   //pdfkit library allows use to 
+import PDFDocument from "pdfkit";   //pdfkit library allows use to generate pdf documents
 
 //creates ticket
 export const generateTicketPDF=async(bookingDetails)=>{
@@ -13,7 +13,7 @@ export const generateTicketPDF=async(bookingDetails)=>{
         //when finished drawing,merge chunks into one final buffer
         doc.on("end",()=>resolve(Buffer.concat(buffers)));
         doc.on("error",reject);
-
+        
         //draw the pdf
         doc.fontSize(25).text("IRCTC E-Ticket",{align:"center"});   //set font size 25 px and write IRCTC E-Ticket
         doc.moveDown(); //change line like endl
